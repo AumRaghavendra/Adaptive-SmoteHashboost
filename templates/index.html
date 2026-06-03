@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMOTE Pipeline Metrics Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="background-mesh">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <main class="dashboard-container">
+        <header>
+            <div class="header-content">
+                <h1>Adaptive Hashboost <span class="gradient-text">Metrics</span></h1>
+                <p>Real-time visualization of your perfectly balanced execution pipelines.</p>
+            </div>
+        </header>
+
+        <section class="control-bar">
+            <select id="dataset-select" class="neon-input">
+                <option value="">Loading datasets...</option>
+            </select>
+            <button id="run-btn" class="neon-button">
+                RUN PIPELINE
+            </button>
+        </section>
+
+        <div id="global-loading" class="hidden">
+            <div class="spinner"></div>
+            <p>Executing SMOTE pipeline across all folds... (This may take several minutes for huge datasets)</p>
+        </div>
+
+        <section id="results-container" class="results-grid">
+            <!-- Dynamic Data Injected Here -->
+            <div class="loading-state">
+                <div class="spinner"></div>
+                <p>Parsing pipeline metrics...</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
